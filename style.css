@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  background-color: hsl(233deg, 47%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0deg, 0%, 100%);
+}
+
+article {
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 326px;
+  min-height: 780px;
+  margin: 10px;
+  box-shadow: 0 20px 5px 10px hsla(0deg, 0%, 0%, 0.05);
+}
+article picture {
+  display: flex;
+  position: relative;
+}
+article picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 240px;
+}
+article picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsla(277deg, 100%, 25%, 0.6);
+}
+article .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+  padding: 30px;
+}
+article .card-info h1 {
+  font-size: 1.75rem;
+}
+article .card-info h1 mark {
+  background: none;
+  color: hsl(277deg, 64%, 61%);
+}
+article .card-info .card-discription {
+  line-height: 1.6rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+article .card-info .card-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+article .card-info .card-stats > div {
+  margin-top: 30px;
+}
+article .card-info .card-stats p {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+}
+article .card-info > * {
+  text-align: center;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+footer p {
+  color: hsla(0deg, 0%, 100%, 0.6);
+  margin: 3px;
+}
+footer i {
+  font-size: 0.9rem;
+}
+footer a {
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+footer a:hover {
+  color: hsl(277deg, 64%, 61%);
+  transition: 700ms;
+}
+
+@media only screen and (min-width: 800px) {
+  article {
+    background-color: hsl(244deg, 38%, 16%);
+    flex-direction: row-reverse;
+    max-width: 1110px;
+    min-width: 800px;
+    min-height: initial;
+    height: 448px;
+  }
+  article picture {
+    max-height: unset;
+    flex-basis: 49%;
+  }
+  article picture img {
+    max-height: initial;
+  }
+  article .card-info {
+    flex-basis: 51%;
+    padding: 6.3%;
+  }
+  article .card-info h1 {
+    font-size: 2.25rem;
+  }
+  article .card-info .card-stats {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    -moz-column-gap: 14%;
+         column-gap: 14%;
+  }
+  article .card-info .card-stats > div {
+    margin: 0;
+  }
+  article .card-info > * {
+    text-align: left;
+  }
+}/*# sourceMappingURL=style.css.map */

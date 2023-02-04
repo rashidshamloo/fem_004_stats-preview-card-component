@@ -1,0 +1,151 @@
+//font import
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Lexend+Deca&display=swap");
+
+//color variables
+$mainBG: hsl(233, 47%, 7%);
+$cardBG: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$white75: hsla(0, 0%, 100%, 0.75);
+$white60: hsla(0, 0%, 100%, 0.6);
+$imageOverlay: hsla(277, 100%, 25%, 0.6);
+$dropShadow: hsla(0, 0%, 0%, 0.05);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  background-color: $mainBG;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+article {
+  background-color: $cardBG;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 326px;
+  min-height: 780px;
+  margin: 10px;
+  box-shadow: 0 20px 5px 10px $dropShadow;
+  picture {
+    display: flex;
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      max-height: 240px;
+    }
+  }
+  picture::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $imageOverlay;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding: 30px;
+    h1 {
+      font-size: 1.75rem;
+      mark {
+        background: none;
+        color: $accent;
+      }
+    }
+    .card-discription {
+      line-height: 1.6rem;
+      color: $white75;
+    }
+    .card-stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      > div {
+        margin-top: 30px;
+      }
+      p {
+        margin-top: 5px;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 300;
+        color: $white60;
+        font-family: "Lexend Deca", sans-serif;
+      }
+    }
+  }
+  .card-info > * {
+    text-align: center;
+  }
+}
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  p {
+    color: $white60;
+    margin: 3px;
+  }
+  i {
+    font-size: 0.9rem;
+  }
+  a {
+    color: $white60;
+  }
+  a:hover {
+    color: $accent;
+    transition: 700ms;
+  }
+}
+@media only screen and (min-width: 800px) {
+  article {
+    background-color: $cardBG;
+    flex-direction: row-reverse;
+    max-width: 1110px;
+    min-width: 800px;
+    min-height: initial;
+    height: 448px;
+    picture {
+      max-height: unset;
+      flex-basis: 49%;
+      img {
+        max-height: initial;
+      }
+    }
+    .card-info {
+      flex-basis: 51%;
+      padding: 6.3%;
+      h1 {
+        font-size: 2.25rem;
+      }
+      .card-stats {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        column-gap: 14%;
+        > div {
+          margin: 0;
+        }
+      }
+    }
+    .card-info > * {
+      text-align: left;
+    }
+  }
+}
