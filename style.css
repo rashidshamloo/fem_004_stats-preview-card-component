@@ -124,6 +124,7 @@ footer a:hover {
   article .card-info {
     flex-basis: 51%;
     padding: 6.3%;
+    justify-content: space-between;
   }
   article .card-info h1 {
     font-size: 2.25rem;
