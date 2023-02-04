@@ -7,7 +7,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   min-height: 100vh;
   background-color: hsl(233deg, 47%, 7%);
   display: flex;
@@ -19,38 +19,36 @@ body {
 
 article {
   background-color: hsl(244deg, 38%, 16%);
-  border-radius: 10px;
+  border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-width: 326px;
-  min-height: 780px;
-  margin: 10px;
-  box-shadow: 0 20px 5px 10px hsla(0deg, 0%, 0%, 0.05);
+  max-width: 20.375rem;
+  min-height: 48.75rem;
+  margin: 0.625rem 0.625rem 0 0.625rem;
+  box-shadow: 0 1.25rem 0.3125rem 0.625rem hsla(0deg, 0%, 0%, 0.05);
 }
-article picture {
+article .stats-image {
+  background-color: hsl(277deg, 64%, 61%);
+}
+article .stats-image picture {
   display: flex;
-  position: relative;
 }
-article picture img {
+article .stats-image img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
-  max-height: 240px;
-}
-article picture::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: hsla(277deg, 100%, 25%, 0.6);
+  max-height: 15rem;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
 }
 article .card-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-grow: 1;
-  padding: 30px;
+  padding: 1.875rem;
 }
 article .card-info h1 {
   font-size: 1.75rem;
@@ -71,13 +69,12 @@ article .card-info .card-stats {
   letter-spacing: 1px;
 }
 article .card-info .card-stats > div {
-  margin-top: 30px;
+  margin: 1rem 0;
 }
 article .card-info .card-stats p {
-  margin-top: 5px;
+  margin-top: 0.32rem;
   text-transform: uppercase;
   font-size: 0.75rem;
-  font-weight: 300;
   color: hsla(0deg, 0%, 100%, 0.6);
   font-family: "Lexend Deca", sans-serif;
 }
@@ -86,13 +83,13 @@ article .card-info > * {
 }
 
 footer {
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
   font-size: 0.8rem;
 }
 footer p {
   color: hsla(0deg, 0%, 100%, 0.6);
-  margin: 3px;
+  margin-bottom: 0.22rem;
 }
 footer i {
   font-size: 0.9rem;
@@ -109,16 +106,19 @@ footer a:hover {
   article {
     background-color: hsl(244deg, 38%, 16%);
     flex-direction: row-reverse;
-    max-width: 1110px;
-    min-width: 800px;
+    max-width: 69.4rem;
+    min-width: 50rem;
     min-height: initial;
-    height: 448px;
+    height: 28rem;
   }
-  article picture {
+  article .stats-image {
     max-height: unset;
     flex-basis: 49%;
   }
-  article picture img {
+  article .stats-image picture {
+    display: initial;
+  }
+  article .stats-image img {
     max-height: initial;
   }
   article .card-info {
@@ -135,6 +135,7 @@ footer a:hover {
     align-items: flex-end;
     -moz-column-gap: 14%;
          column-gap: 14%;
+    margin-top: 2.4rem;
   }
   article .card-info .card-stats > div {
     margin: 0;
